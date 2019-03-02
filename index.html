@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My To-do List</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="animation.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <input type="text" id="addTodo" required>
+                <label>Things to do</label>
+                <button type="submit" id="addButton">Add</button>
+            </div>
+            <div class="content">
+                <ul>
+                    <li class="clone" draggable="true">
+                        <input type="checkbox" id="0">
+                        <label for="0">
+                            <span class="order"></span>
+                            <span class="to-do"></span>
+                        </label>
+                        <button type="button" class="deleteButton">&Chi;</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer">
+                <button type="button" class="footer-buttons" id="saveButton">Save information</button>
+                <button type="button" class="footer-buttons" id="checkButton">Check the list</button>
+            </div>
+        </div>
+        <div class="modal-for-container">
+            <div class="modal-content animated zoomInDown">
+                <h2 class="modal-title"></h2>
+                <p class="modal-text"></p>
+                <div class="button-container">
+                    <button class="modal-buttons right-button" type="button">Exit and save the information</button>
+                    <button class="modal-buttons left-button" type="button">Rollback changes</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
